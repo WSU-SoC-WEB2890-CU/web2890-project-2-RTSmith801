@@ -2,27 +2,321 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>WEB 2890 - Project 2</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Project 2 ...">
-
-  <link rel="stylesheet" href="./stylesheets/main.scss">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chaos Circus Co</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="stylesheets/main.css" />
 </head>
 
-<body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Project 2: A multiple-page project of your choosing.
-  </h1>
+<body class="site-body">
+  <!-- Header / Nav -->
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top site-header">
+    <div class="container d-flex align-items-center justify-content-between">
+      <!-- Brand / Logo -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#hero" aria-label="Chaos Circus Co homepage">
+        <img src="images/icon_chaos_circus_co.webp" alt="Chaos Circus Co" width="40" height="40"
+          class="rounded-circle me-2" />
+        <span class="brand-name">Chaos Circus Co</span>
+      </a>
 
-  <script type="module" src="./javascripts/main.js"></script>
+      <!-- Hamburger Button (hidden on desktop automatically) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation Menu -->
+      <nav id="mainNav" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#performers">Performers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#posts">Recent Posts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-outline" href="#tickets">Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" class="main-content">
+    <!-- HERO -->
+    <section id="hero" class="hero d-flex align-items-center">
+      <div class="container text-center">
+        <h1 class="hero-title">Chaos Circus Co</h1>
+        <p class="hero-sublead">
+          Cabaret, aerial arts, and themed circus shows — Salt Lake City's immersive spectacle.
+        </p>
+
+        <div class="hero-cta d-flex justify-content-center gap-3 mt-4">
+          <a class="btn btn-gold btn-lg" href="#events">Upcoming Events</a>
+          <a class="btn btn-outline btn-lg" href="#performers">Meet the Performers</a>
+        </div>
+
+        <div class="hero-media mt-5">
+          <!-- Will replace with client's desired hero photo -->
+          <picture>
+            <img src="images/hero.jpg" alt="Chaos Circus Co performers under stage lights" class="img-hero" />
+          </picture>
+          <p class="hero-caption"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-5">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-6">
+            <h2 class="section-heading">About Chaos Circus Co</h2>
+            <p class="lead">
+              Chaos Circus Co is a Salt Lake City based cabaret & circus collective producing themed-cabaret
+              installations, aerial arts showcases, and bespoke entertainment for festivals, private events and
+              corporate bookings.
+            </p>
+            <p class="small text-muted">
+
+            </p>
+
+            <div class="mt-3">
+              <a class="btn btn-gold me-2" href="https://www.instagram.com/chaoscircusco/" target="_blank"
+                rel="noopener">Instagram</a>
+              <a class="btn btn-outline" href="https://www.facebook.com/61558493872618/" target="_blank"
+                rel="noopener">Facebook</a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="about-grid">
+              <img src="images/about-1.jpg" alt="Aerial performer mid drop" class="about-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section id="events" class="section bg-section py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-heading">Upcoming & Featured Events</h2>
+          <a class="link-extern" href="https://www.eventbrite.com/o/chaos-circus-co-53036584363" target="_blank"
+            rel="noopener">
+            See all events on Eventbrite
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Event cards -->
+          <article class="col-md-4">
+            <div class="card event-card h-100">
+              <img src="images/what-goes-bump-in-the-night.jpg" class="card-img-top"
+                alt="What Goes Bump In The Night poster" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">What Goes Bump In The Night?</h3>
+                <p class="card-meta text-muted">Nov 8, 2025 • Masonic Temple — SLC</p>
+                <p class="small">
+                  The Monsters Await You. 18+ Only.
+                </p>
+                <div class="mt-auto">
+                  <a class="btn btn-gold"
+                    href="https://www.eventbrite.com/e/what-goes-bump-in-the-night-a-monster-cabaret-tickets-1641483765129?aff=ebdsoporgprofile"
+                    target="_blank" rel="noopener">Event Details</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4">
+            <div class="card event-card h-100">
+              <img src="images/under-the-sea.jpg" class="card-img-top" alt="Under the Sea poster" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Under the Sea</h3>
+                <p class="card-meta text-muted">
+                  July 12, 2025 — Alliance Theater / Utah Arts Alliance
+                </p>
+                <p class="small">
+                  A comedic, aquatic-themed cabaret featuring mermaids, burlesque and comedic turns.
+                </p>
+                <div class="mt-auto">
+                  <a class="btn btn-gold"
+                    href="https://www.eventbrite.com/e/under-the-sea-a-chaos-circus-cabaret-tickets-1349155042049?aff=ebdsoporgprofile"
+                    target="_blank" rel="noopener">Event Details</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4">
+            <div class="card event-card h-100">
+              <img src="images/devils-and-debutantes.jpg" class="card-img-top" alt="Spectacular Spectacular poster" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title">Devils & Debutantes</h3>
+                <p class="card-meta text-muted">April 12, 2025 • 370 Aspen Avenue - SLC</p>
+                <p class="small">
+                  A Chaos Circus Cabaret. Reserve seats early.
+                </p>
+                <div class="mt-auto">
+                  <a class="btn btn-gold"
+                    href="https://www.eventbrite.com/e/devils-debutantes-a-chaos-circus-cabaret-tickets-1243045676079?aff=ebdsoporgprofile"
+                    target="_blank" rel="noopener">Event Details</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Depending on client feedback, may create additional pages to showcase past events with photos. 
+             Otherwise will omit and leave link to Eventbrite -->
+
+        <!-- <div class="mt-4 text-center">
+          <a class="btn btn-outline" href="events.html">Past Events & Archive</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- PERFORMERS -->
+    <section id="performers" class="section py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-heading">Meet the Performers</h2>
+          <a class="link-extern" href="under-construction.html">All performers & bios</a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Will use actual performer names/bios upon client approval -->
+          <div class="col-sm-6 col-md-4">
+            <div class="performer-card">
+              <img src="images/performer-aerial.jpg" alt="Aerialist" class="performer-thumb" />
+              <h4>Aerialist</h4>
+              <p class="small text-muted">Silks & hoop specialist — frequently featured in cabaret nights.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="performer-card">
+              <img src="images/performer-burlesque.jpg" alt="Burlesque performer" class="performer-thumb" />
+              <h4>Burlesque</h4>
+              <p class="small text-muted">Chairlesque + classic burlesque with contemporary choreography.</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4">
+            <div class="performer-card">
+              <img src="images/performer-acrobat.jpg" alt="Acrobat" class="performer-thumb" />
+              <h4>Acrobat</h4>
+              <p class="small text-muted">Partner acrobatics & stunts — available for custom shows and workshops.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT POSTS (static placeholders until API is added) -->
+    <section id="posts" class="section bg-section py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-heading">Recent Posts</h2>
+          <a class="link-extern" href="https://www.instagram.com/chaoscircusco/" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        </div>
+
+        <div id="igPosts" class="row g-3">
+          <!-- Static placeholders -->
+          <div class="col-12 col-md-4">
+            <div class="ig-post">
+              <img src="images/post-1.jpg" alt="Performer on aerial silks" class="ig-img" />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="ig-post">
+              <img src="images/post-2.jpg" alt="Cabaret stage lights and performers" class="ig-img" />
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="ig-post">
+              <img src="images/post-3.jpg" alt="Fire performer at Chaos Circus Co event" class="ig-img" />
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-3 small text-muted text-center">
+          Posts are currently static placeholders until Instagram API credentials are provided.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- CONTACT / BOOKING -->
+    <section id="contact" class="section py-5">
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-6">
+            <h2 class="section-heading">Book Chaos Circus Co</h2>
+            <p class="lead">
+              For booking private events, festivals, or to join the company, email
+              <a href="mailto:info@chaoscircusco.com" class="link-extern">info@chaoscircusco.com</a> or DM on
+              Instagram (@chaoscircusco).
+            </p>
+
+            <ul class="contact-list small">
+              <li>
+                <strong>Instagram:</strong>
+                <a href="https://www.instagram.com/chaoscircusco/" target="_blank"
+                  class="link-extern">@chaoscircusco</a>
+              </li>
+              <li>
+                <strong>Facebook:</strong>
+                <a href="https://www.facebook.com/61558493872618/" target="_blank" class="link-extern">Chaos Circus
+                  Co</a>
+              </li>
+              <li><strong>Typical locations:</strong> Salt Lake City, UT (various venues)</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <form id="bookingForm" class="booking-form" action="#" method="post" onsubmit="return handleForm(event)">
+              <div class="mb-2">
+                <label class="form-label">Name</label>
+                <input class="form-control" name="name" required />
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Email</label>
+                <input class="form-control" type="email" name="email" required />
+              </div>
+              <div class="mb-2">
+                <label class="form-label">Message / Inquiry</label>
+                <textarea class="form-control" name="message" rows="5" required></textarea>
+              </div>
+              <div class="text-end">
+                <button class="btn btn-gold" type="submit">Send Inquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer py-4">
+    <div class="container text-center">
+      <p class="mb-1">© <span id="year"></span> Chaos Circus Co 🎪 Salt Lake City</p>
+      <p class="small mb-0 fine-print">Some shows are 18+; check the event description.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="javascripts/main.js"></script>
 </body>
+
 </html>
