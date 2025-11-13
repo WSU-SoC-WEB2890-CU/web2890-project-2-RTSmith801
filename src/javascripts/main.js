@@ -23,7 +23,7 @@ import "../stylesheets/main.css"
     })
 
     // Inject static "Recent Instagram" posts — replace with Instagram API when credentials available.
-    injectStaticPosts()
+    // injectStaticPosts()
   })
 
   // Demo handler for booking form (server-side not connected)
