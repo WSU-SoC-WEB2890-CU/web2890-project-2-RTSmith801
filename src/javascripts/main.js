@@ -1,5 +1,6 @@
 //TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
+import "../stylesheets/main.css"
 
 // javascripts/main.js
 // Progressive enhancement: simple behaviors and static Instagram injection
