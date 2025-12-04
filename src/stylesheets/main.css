@@ -10141,11 +10141,11 @@ textarea.form-control-lg {
 
 /* Links */
 .link-extern {
-  color: #706c67;
+  color: #d4af37;
   text-decoration: none;
 }
 .link-extern:hover {
-  color: #bdb9b5;
+  color: #F34213;
 }
 
 body.site-body {
@@ -10222,8 +10222,11 @@ body.site-body {
   min-width: 170px;
 }
 .hero .img-hero {
+  display: block;
+  margin: 0 auto;
   max-width: 900px;
-  width: 100%;
+  max-height: 950px;
+  height: 100%;
   border-radius: 12px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   margin-top: 1.25rem;
@@ -10233,6 +10236,22 @@ body.site-body {
   font-size: 0.9rem;
   color: #bdb9b5;
   margin-top: 0.5rem;
+}
+.hero #heroCarousel {
+  height: 70vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.hero #heroCarousel .carousel-inner, .hero #heroCarousel div {
+  height: 100%;
+  width: 100%;
+}
+.hero #heroCarousel img {
+  object-fit: contain;
+  object-position: center center;
+  box-shadow: none;
+  border: none;
 }
 
 /* Sections */
@@ -10298,15 +10317,15 @@ body.site-body {
   margin-top: 0.4rem;
 }
 
-/* Performer card */
-.performer-card {
+/* Acts */
+.performance-card {
   background: #111113;
   border: 1px solid rgba(255, 255, 255, 0.02);
   padding: 1.25rem;
   text-align: center;
   border-radius: 12px;
 }
-.performer-card .performer-thumb {
+.performance-card .performer-thumb {
   width: 120px;
   height: 120px;
   object-fit: cover;
@@ -10316,13 +10335,28 @@ body.site-body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(212, 175, 55, 0.06);
 }
-.performer-card h4, .performer-card .h4 {
+.performance-card h4, .performance-card .h4 {
   margin-top: 0.75rem;
   margin-bottom: 0.25rem;
   font-family: "Cinzel", serif;
 }
 
 /* Gallery / posts grid */
+.ig-post,
+#igPostsCarousel .carousel-item {
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.ig-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 #igPosts .ig-card {
   background: rgba(255, 255, 255, 0.04);
   border-radius: 10px;
@@ -10366,6 +10400,13 @@ body.site-body {
 }
 #posts .link-extern:hover {
   text-decoration: underline;
+}
+
+#contact ul {
+  list-style: none;
+}
+#contact ul li {
+  margin-bottom: 0.5rem;
 }
 
 /* Booking form */
@@ -10412,34 +10453,24 @@ body.site-body {
   transform: translateY(-3px);
 }
 
-/* Under Construction Page Styles */
-.under-construction-content {
-  background: radial-gradient(circle at center, #4b0000, #0e0b0b);
-  text-align: center;
-  padding-top: 6rem;
-}
-.under-construction-content h1, .under-construction-content .h1 {
-  color: #f5c542;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-.under-construction-content .lead {
-  color: #ddd;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-}
-.under-construction-content .btn-gold {
-  background-color: #d4af37;
-  border: none;
-  color: #000;
-  transition: all 0.3s ease;
-}
-.under-construction-content .btn-gold:hover {
-  background-color: #b8962e;
-  color: #fff;
+.carousel .card,
+.carousel .performance-card,
+.carousel .ig-img {
+  margin: 0 auto;
+  max-width: 90%;
 }
 
-/* Utilities & responsive tweaks */
+@media (min-width: 768px) {
+  .performance-thumb {
+    width: 100%;
+    height: 580px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .performance-card {
+    text-align: left;
+  }
+}
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.2rem;
@@ -10447,9 +10478,11 @@ body.site-body {
   .img-hero {
     max-width: 100%;
   }
-  .performer-thumb {
-    width: 96px;
-    height: 96px;
+  .performance-thumb {
+    width: 200px;
+  }
+  #events .row, #acts .row, #posts .row {
+    display: none !important;
   }
 }
 

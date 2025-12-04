@@ -37,10 +37,11 @@
           <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="#performers">Performers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acts">Acts</a></li>
           <li class="nav-item"><a class="nav-link" href="#posts">Recent Posts</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item ms-3"><a class="btn btn-outline" href="#tickets">Tickets</a></li>
+          <li class="nav-item ms-3"><a class="btn btn-outline"
+              href="https://www.eventbrite.com/o/chaos-circus-co-53036584363" target="_blank">Tickets</a></li>
         </ul>
       </nav>
     </div>
@@ -51,54 +52,74 @@
     <!-- HERO -->
     <section id="hero" class="hero d-flex align-items-center">
       <div class="container text-center">
+
         <h1 class="hero-title">Chaos Circus Co</h1>
         <p class="hero-sublead">
           Cabaret, aerial arts, and themed circus shows — Salt Lake City's immersive spectacle.
         </p>
 
-        <div class="hero-cta d-flex justify-content-center gap-3 mt-4">
+        <div class="hero-cta d-flex flex-column flex-md-row justify-content-center gap-3 mt-4">
           <a class="btn btn-gold btn-lg" href="#events">Upcoming Events</a>
-          <a class="btn btn-outline btn-lg" href="#performers">Meet the Performers</a>
+          <a class="btn btn-outline btn-lg" href="#acts">Performance Types</a>
         </div>
 
-        <div class="hero-media mt-5">
-          <!-- Will replace with client's desired hero photo -->
-          <picture>
-            <img src="images/hero.jpg" alt="Chaos Circus Co performers under stage lights" class="img-hero" />
-          </picture>
-          <p class="hero-caption"></p>
+
+        <!-- HERO CAROUSEL -->
+        <div id="heroCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="images/hero01.jpg" class="d-block w-100 img-hero" alt="Chaos Circus performers on stage">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/hero02.jpg" class="d-block w-100 img-hero" alt="Aerialist mid-performance">
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/hero03.jpg" class="d-block w-100 img-hero" alt="Cabaret ensemble during finale">
+            </div>
+
+          </div>
+
+          <!-- controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
         </div>
+
       </div>
     </section>
+
 
     <!-- ABOUT -->
     <section id="about" class="section py-5">
       <div class="container">
         <div class="row align-items-center gy-4">
-          <div class="col-md-6">
+          <div class="col-12 col-md-6 order-2 order-md-1">
             <h2 class="section-heading">About Chaos Circus Co</h2>
             <p class="lead">
               Chaos Circus Co is a Salt Lake City based cabaret & circus collective producing themed-cabaret
               installations, aerial arts showcases, and bespoke entertainment for festivals, private events and
               corporate bookings.
             </p>
-            <p class="small text-muted">
-
-            </p>
-
             <div class="mt-3">
-              <a class="btn btn-gold me-2" href="https://www.instagram.com/chaoscircusco/" target="_blank"
-                rel="noopener">Instagram</a>
-              <a class="btn btn-outline" href="https://www.facebook.com/61558493872618/" target="_blank"
-                rel="noopener">Facebook</a>
+              <a class="btn btn-gold me-2" href="#events">Events</a>
+              <a class="btn btn-outline" href="#contact">Book Us</a>
             </div>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-12 col-md-6 order-1 order-md-2">
             <div class="about-grid">
               <img src="images/about-1.jpg" alt="Aerial performer mid drop" class="about-img" />
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -174,6 +195,51 @@
           </article>
         </div>
 
+        <!-- MOBILE CAROUSEL -->
+        <div id="eventsCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="card event-card">
+                <img src="images/what-goes-bump-in-the-night.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">What Goes Bump In The Night?</h3>
+                  <p class="card-meta text-muted">Nov 8, 2025 • Masonic Temple — SLC</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card event-card">
+                <img src="images/under-the-sea.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Under the Sea</h3>
+                  <p class="card-meta text-muted">July 12, 2025 — Alliance Theater</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card event-card">
+                <img src="images/devils-and-debutantes.jpg" class="card-img-top">
+                <div class="card-body">
+                  <h3 class="card-title">Devils & Debutantes</h3>
+                  <p class="card-meta text-muted">April 12, 2025 • SLC</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
         <!-- Depending on client feedback, may create additional pages to showcase past events with photos. 
              Otherwise will omit and leave link to Eventbrite -->
 
@@ -183,65 +249,125 @@
       </div>
     </section>
 
-    <!-- PERFORMERS -->
-    <section id="performers" class="section py-5">
+    <!-- ACTS & PERFORMANCE TYPES -->
+
+    <section id="acts" class="section py-5">
       <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h2 class="section-heading">Meet the Performers</h2>
-          <a class="link-extern" href="under-construction.html">All performers & bios</a>
+          <h2 class="section-heading">Acts &amp; Performance Types</h2>
         </div>
 
         <div class="row g-4">
-          <!-- Will use actual performer names/bios upon client approval -->
+          <!-- Aerial Arts -->
           <div class="col-sm-6 col-md-4">
-            <div class="performer-card">
-              <img src="images/performer-aerial.jpg" alt="Aerialist" class="performer-thumb" />
-              <h4>Aerialist</h4>
-              <p class="small text-muted">Silks & hoop specialist — frequently featured in cabaret nights.</p>
+            <div class="performance-card">
+              <img src="images/performer-aerial.jpg" alt="Aerial Arts" class="performance-thumb" />
+              <h4>Aerial Arts</h4>
+              <p class="small">
+                Silks, hoop, and hammock acts featuring dynamic drops and expressive choreography.
+              </p>
             </div>
           </div>
 
+          <!-- Prop Performance -->
           <div class="col-sm-6 col-md-4">
-            <div class="performer-card">
-              <img src="images/performer-burlesque.jpg" alt="Burlesque performer" class="performer-thumb" />
-              <h4>Burlesque</h4>
-              <p class="small text-muted">Chairlesque + classic burlesque with contemporary choreography.</p>
+            <div class="performance-card">
+              <img src="images/performer-poi.jpg" alt="Fire Performer" class="performance-thumb" />
+              <h4>Prop Performance</h4>
+              <p class="small">
+                LED poi, fabrics, staffs, and flow arts inspired by Chaos Circus Co’s signature dance aesthetic.
+              </p>
             </div>
           </div>
 
+          <!-- Dance & Burlesque Fusion -->
           <div class="col-sm-6 col-md-4">
-            <div class="performer-card">
-              <img src="images/performer-acrobat.jpg" alt="Acrobat" class="performer-thumb" />
-              <h4>Acrobat</h4>
-              <p class="small text-muted">Partner acrobatics & stunts — available for custom shows and workshops.</p>
+            <div class="performance-card">
+              <img src="images/performer-burlesque.jpg" alt="Dance & Burlesque Fusion" class="performance-thumb" />
+              <h4>Dance & Burlesque Fusion</h4>
+              <p class="small">
+                A blend of dance, cabaret, and neo-burlesque as showcased frequently in their shows and promotions.
+              </p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- MOBILE CAROUSEL -->
+      <div id="performerCarousel" class="carousel slide d-md-none mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Aerial Arts -->
+          <div class="carousel-item active">
+            <div class="performance-card text-center px-3">
+              <img src="images/performer-aerial.jpg" class="performance-thumb">
+              <h4 class="mt-3">Aerial Arts</h4>
+              <p class="small">
+                Silks, hoop, and hammock acts featuring dynamic drops and expressive choreography.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fire Performance -->
+          <div class="carousel-item">
+            <div class="performance-card text-center px-3">
+              <img src="images/performer-poi.jpg" class="performance-thumb">
+              <h4 class="mt-3">Prop Performance</h4>
+              <p class="small">
+                LED poi, fabrics, staffs, and flow arts inspired by Chaos Circus Co’s signature dance aesthetic.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dance & Burlesque Fusion -->
+          <div class="carousel-item">
+            <div class="performance-card text-center px-3">
+              <img src="images/performer-burlesque.jpg" class="performance-thumb">
+              <h4 class="mt-3">Dance & Burlesque Fusion</h4>
+              <p class="small">
+                A modern blend of dance, cabaret, and neo-burlesque.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#performerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#performerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
     </section>
+
 
     <!-- RECENT POSTS (static placeholders until API is added) -->
     <section id="posts" class="section bg-section py-5">
       <div class="container">
+
+        <!-- Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h2 class="section-heading">Recent Posts</h2>
-          <a class="link-extern" href="https://www.instagram.com/chaoscircusco/" target="_blank" rel="noopener">
-            Instagram
-          </a>
+          <object type="image/svg+xml" data="./images/logo_ig.svg" class="logo"></object>
         </div>
 
-        <div id="igPosts" class="row g-3">
-          <!-- Static placeholders -->
+        <!-- DESKTOP GRID -->
+        <div id="igPosts" class="row g-3 d-none d-md-flex">
           <div class="col-12 col-md-4">
             <div class="ig-post">
               <img src="images/post-1.jpg" alt="Performer on aerial silks" class="ig-img" />
             </div>
           </div>
+
           <div class="col-12 col-md-4">
             <div class="ig-post">
               <img src="images/post-2.jpg" alt="Cabaret stage lights and performers" class="ig-img" />
             </div>
           </div>
+
           <div class="col-12 col-md-4">
             <div class="ig-post">
               <img src="images/post-3.jpg" alt="Fire performer at Chaos Circus Co event" class="ig-img" />
@@ -249,11 +375,35 @@
           </div>
         </div>
 
+        <!-- MOBILE CAROUSEL VERSION -->
+        <div id="igPostsCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/post-1.jpg" class="d-block w-100 ig-img" alt="Performer on aerial silks">
+            </div>
+            <div class="carousel-item">
+              <img src="images/post-2.jpg" class="d-block w-100 ig-img" alt="Cabaret stage lights and performers">
+            </div>
+            <div class="carousel-item">
+              <img src="images/post-3.jpg" class="d-block w-100 ig-img" alt="Fire performer at Chaos Circus Co event">
+            </div>
+          </div>
+
+          <!-- Optional controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#igPostsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#igPostsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
         <p class="mt-3 small text-muted text-center">
-          Posts are currently static placeholders until Instagram API credentials are provided.
+          <!-- Posts are currently static placeholders until Instagram API credentials are provided. -->
         </p>
       </div>
     </section>
+
 
 
     <!-- CONTACT / BOOKING -->
@@ -270,33 +420,36 @@
 
             <ul class="contact-list small">
               <li>
-                <strong>Instagram:</strong>
-                <a href="https://www.instagram.com/chaoscircusco/" target="_blank"
-                  class="link-extern">@chaoscircusco</a>
+                <a href="https://www.instagram.com/chaoscircusco/" target="_blank" class="link-extern"><object
+                    type="image/svg+xml" data="./images/logo_ig.svg" class="logo"></object> @chaoscircusco</a>
               </li>
               <li>
-                <strong>Facebook:</strong>
-                <a href="https://www.facebook.com/61558493872618/" target="_blank" class="link-extern">Chaos Circus
+                <a href="https://www.facebook.com/61558493872618/" target="_blank" class="link-extern"><object
+                    type="image/svg+xml" data="./images/logo_fb.svg" class="logo"></object> Chaos Circus
                   Co</a>
               </li>
-              <li><strong>Typical locations:</strong> Salt Lake City, UT (various venues)</li>
             </ul>
           </div>
 
           <div class="col-md-6">
-            <form id="bookingForm" class="booking-form" action="#" method="post" onsubmit="return handleForm(event)">
+            <form name="bookingForm" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="bookingForm" />
+
               <div class="mb-2">
                 <label class="form-label">Name</label>
                 <input class="form-control" name="name" required />
               </div>
+
               <div class="mb-2">
                 <label class="form-label">Email</label>
                 <input class="form-control" type="email" name="email" required />
               </div>
+
               <div class="mb-2">
                 <label class="form-label">Message / Inquiry</label>
                 <textarea class="form-control" name="message" rows="5" required></textarea>
               </div>
+
               <div class="text-end">
                 <button class="btn btn-gold" type="submit">Send Inquiry</button>
               </div>
